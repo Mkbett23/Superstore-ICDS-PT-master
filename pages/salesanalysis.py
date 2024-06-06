@@ -10,7 +10,7 @@ superstore = pd.read_csv("data/Sample - Superstore.csv", encoding = "latin1")
 
 superstore['Order Date'] = pd.to_datetime(superstore['Order Date'], format = "%m/%d/%Y")
 
-# Country Distribution of products sold to
+# Country Distribution of products sold to customers
 
 countryquantity = superstore.groupby('Country')['Quantity'].sum().reset_index()
 
